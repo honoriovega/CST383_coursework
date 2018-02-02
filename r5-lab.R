@@ -40,3 +40,15 @@ rm(list = ls())
 
 #14. Load the ‘dat’ object from file ‘census-binary.RData’.  Did it appear to load faster than when you read the data from a CSV file? YES
 load("census-binary.RData")
+
+#15. Install the library ‘ggplot2’ using the ‘packages’ tab in the lower-right pane of RStudio.
+
+#16. Load the package ‘ggplot2’ using R’s ‘library’ function.
+library("ggplot2")
+
+#17. Make a plot with ggplot2 using the following code:
+mtcars$gear <- factor(mtcars$gear,levels=c(3,4,5),
+                      labels=c("3gears","4gears","5gears"))
+qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5),
+      main="Distribution of Gas Milage", xlab="Miles Per Gallon",
+      ylab="Density")
