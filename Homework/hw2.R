@@ -96,7 +96,6 @@ mtcars$hp/mean(mtcars$hp)
 # shown above.  For the label values, use numbers 1, 2, or 3.
 labels = c("part1","part1","part1","part2","part2","part2","part3","part3","part3")
 tr.dat = data.frame(label=labels,width=c(3.1,3.0,3.0,3.1,3.2,3.2,3.4,3.4,3.3),len=c(5.2,5.3,5.2,4.8,4.9,4.8,5.6,5.5,5.4))
-print(tr.dat)
 #@ 25
 # x and y and numeric vectors of length 3.  Compute a vector d
 # such that d[1] is the (Euclidean) distance from x[1],y[1] to x[1],y[1],
