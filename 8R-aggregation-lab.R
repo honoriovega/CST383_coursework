@@ -54,18 +54,19 @@ print(results)
 #############################################################
 
 # for each native country, what is the average education num?
-aggregate(education_num ~ native_country,data=dat,mean)
+averageEducationNumAcrossCountries = aggregate(education_num ~ native_country,data=dat,mean)
 # sort the resulting data frame by decreasing mean education num
-
-
+sortedIndexes = order(-averageEducationNumAcrossCountries$education_num)
+print(averageEducationNumAcrossCountries[sortedIndexes,])
 # for each occupation, compute the median age
-
+averageAgeByOccupation = aggregate(age ~ occupation,data=dat,mean)
 
 # order the output by increasing age
-
+sortedAverageAgeByOccupation = averageAgeByOccupation[order(averageAgeByOccupation$age),] 
+print(sortedAverageAgeByOccupation)
 
 # plot the result as a bar plot
-
+table(sortedAverageAgeByOccupation)
 
 # Note: it is worthwhile to read the help page for 'aggregate'
 
