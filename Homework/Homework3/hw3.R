@@ -1,4 +1,3 @@
-
 #
 # Intro to Data Science: R homework for week 3
 #
